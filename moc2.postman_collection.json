@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "ea4cdb55-8750-4279-9465-b72ee6d07820",
+		"name": "moc2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "api/studentDetails/1104",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/studentDetails/1104",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"studentDetails",
+						"1104"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/api/studentDetails/1104",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"studentDetails",
+								"1104"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"Current_Address\": {\n    \"House_Number\": \"441\",\n    \"City\": \"Jelcz\",\n    \"State\": \"stateB\",\n    \"Country\": \"Poland\",\n    \"PhoneNumber\": [\n      {\n        \"Std_Code\": \"48\",\n        \"Home\": \"523125\",\n        \"Mobile\": \"48623326\"\n      }\n    ]\n  }"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

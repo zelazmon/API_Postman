@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "77f63109-4964-47d8-9c2a-7c458c6b5482",
+		"name": "Student_colletions_multData",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails/{{ID}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7bd8db58-b2e9-4534-8c70-3485988418dd",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 700ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(700);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/{{APINAME}}/studentsDetails/{{ID}}",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"{{APINAME}}",
+						"studentsDetails",
+						"{{ID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

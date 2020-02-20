@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "8fdf2811-05a8-49de-bb6d-a2c1794b4266",
+		"name": "moc_getdata",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/studentsDetails/1104",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}//api/studentsDetails/1104",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"api",
+						"studentsDetails",
+						"1104"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/api/studentsDetails/1104",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}//api/studentsDetails/1104",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"api",
+								"studentsDetails",
+								"1104"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": [],
+					"cookie": [],
+					"body": "\"Current_Address\": {\r\n    \"House_Number\": \"441\",\r\n    \"City\": \"Jelcz\",\r\n    \"State\": \"stateB\",\r\n    \"Country\": \"Poland\",\r\n    \"PhoneNumber\": [\r\n      {\r\n        \"Std_Code\": \"48\",\r\n        \"Home\": \"523125\",\r\n        \"Mobile\": \"48623326\"\r\n      }\r\n    ]\r\n  }"
+				},
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}//api/studentsDetails/1104",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"api",
+								"studentsDetails",
+								"1104"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "\"Current_Address\": {\n    \"House_Number\": \"441\",\n    \"City\": \"Jelcz\",\n    \"State\": \"stateB\",\n    \"Country\": \"Poland\",\n    \"PhoneNumber\": [\n      {\n        \"Std_Code\": \"48\",\n        \"Home\": \"523125\",\n        \"Mobile\": \"48623326\"\n      }\n    ]\n  }"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

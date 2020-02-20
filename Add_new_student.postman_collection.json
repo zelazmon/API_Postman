@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "60aa0f8c-7ef7-40d7-b1d0-664b9ff4afd1",
+		"name": "Add_new_student",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"first_name\": \"monika\",\r\n        \"middle_name\": \"monika\",\r\n        \"last_name\": \"hyyy\",\r\n        \"date_of_birth\": \"01/04/1983\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/technicalskills",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"language\": [\r\n    \"java\",\r\n    \"C++\",\r\n    \"Python\"\r\n  ],\r\n  \"yearexp\": \"2 years2\",\r\n  \"lastused\": \"yesterday\",\r\n  \"st_id\": \"160188\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/technicalskills",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"technicalskills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Permanent_Address\": {\r\n    \"House_Number\": \"23\",\r\n    \"City\": \"Wro\",\r\n    \"State\": \"stateA\",\r\n    \"Country\": \"Poland\",\r\n    \"PhoneNumber\": [\r\n      {\r\n        \"Std_Code\": \"48\",\r\n        \"Home\": \"123123\",\r\n        \"Mobile\": \"48123321\"\r\n      }\r\n    ]\r\n  },\r\n  \"Current_Address\": {\r\n    \"House_Number\": \"441\",\r\n    \"City\": \"Jelcz\",\r\n    \"State\": \"stateB\",\r\n    \"Country\": \"Poland\",\r\n    \"PhoneNumber\": [\r\n      {\r\n        \"Std_Code\": \"48\",\r\n        \"Home\": \"523125\",\r\n        \"Mobile\": \"48623326\"\r\n      }\r\n    ]\r\n  },\r\n  \"stId\": \"160188\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/addresses",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails/160188",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails/160188",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails",
+						"160188"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/StDetails/160188",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/StDetails/160188",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"StDetails",
+						"160188"
+					]
+				},
+				"description": "unautorizen"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

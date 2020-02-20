@@ -1,0 +1,53 @@
+{
+	"info": {
+		"_postman_id": "d42d90ce-19fa-4d5a-a429-b4457901bcad",
+		"name": "uptimecheck",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails/160188",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "4918360f-5fa2-40fc-8cde-b4c4ebd3da26",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test('Some test name', function () {",
+							"\tpm.response.to.have.status(200);",
+							"\tpm.expect(pm.response.responseTime).to.be.below(1000);",
+							"})"
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails/160188",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails",
+						"160188"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

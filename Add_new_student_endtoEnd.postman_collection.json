@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "ca9a5e27-303e-455c-9fcb-e10320f130f7",
+		"name": "Add_new_student_endtoEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails_addNewStudent",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2c06131e-a176-4eff-95d7-cc7c936f8d0d",
+						"exec": [
+							"var jsondata = JSON.parse(responseBody);",
+							"postman.setGlobalVariable(\"StudentID\",jsondata.id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"first_name\": \"monika\",\r\n        \"middle_name\": \"monika\",\r\n        \"last_name\": \"hyyy\",\r\n        \"date_of_birth\": \"01/04/1983\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Permanent_Address\": {\r\n    \"House_Number\": \"23\",\r\n    \"City\": \"Wro\",\r\n    \"State\": \"stateA\",\r\n    \"Country\": \"Poland\",\r\n    \"PhoneNumber\": [\r\n      {\r\n        \"Std_Code\": \"48\",\r\n        \"Home\": \"123123\",\r\n        \"Mobile\": \"48123321\"\r\n      }\r\n    ]\r\n  },\r\n  \"Current_Address\": {\r\n    \"House_Number\": \"441\",\r\n    \"City\": \"Jelcz\",\r\n    \"State\": \"stateB\",\r\n    \"Country\": \"Poland\",\r\n    \"PhoneNumber\": [\r\n      {\r\n        \"Std_Code\": \"48\",\r\n        \"Home\": \"523125\",\r\n        \"Mobile\": \"48623326\"\r\n      }\r\n    ]\r\n  },\r\n  \"stId\": \"{{StudentID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/addresses",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/technicalskills",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"language\": [\r\n    \"java\",\r\n    \"C++\",\r\n    \"Python\"\r\n  ],\r\n  \"yearexp\": \"2 years2\",\r\n  \"lastused\": \"yesterday\",\r\n  \"st_id\": \"{{StudentID}}\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/technicalskills",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"technicalskills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails/{{StudentID}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails/{{StudentID}}",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails",
+						"{{StudentID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/studentsDetails/{{StudentID}}_jsonpath",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7b7e5216-05a2-4463-8fb6-8713a0571193",
+						"exec": [
+							"json_response = JSON.parse(responseBody)",
+							"",
+							"x = json_response.data.lastname",
+							"pm.expect(x).to.equal(\"hyyy\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/studentsDetails/{{StudentID}}",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"studentsDetails",
+						"{{StudentID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://thetestingworldapi.com/api/StDetails/{{StudentID}}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://thetestingworldapi.com/api/FinalStudentDetails/{{StudentID}}",
+					"protocol": "http",
+					"host": [
+						"thetestingworldapi",
+						"com"
+					],
+					"path": [
+						"api",
+						"FinalStudentDetails",
+						"{{StudentID}}"
+					]
+				},
+				"description": "unautorizen"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
